@@ -45,6 +45,11 @@ INSTALLED_APPS = [
 
 LOGIN_REDIRECT_URL = '/protected/'
 
+# https://www.google.com/recaptcha/admin/create
+#
+RECAPTCHA_PUBLIC_KEY = 'your-public-key'
+RECAPTCHA_PRIVATE_KEY = 'your-private-key'
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -55,6 +60,17 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     #'axes.middleware.AxesMiddleware',
 ]
+
+## AXES 
+## Number of allowed login attempts before locking out
+#AXES_FAILURE_LIMIT = 5
+## Time (in hours) until the lockout is reset. Can also be a timedelta.
+#AXES_COOLOFF_TIME = 1  # 1 hour
+## Optionally, track based on username/IP. Default is IP.
+#AXES_LOCK_OUT_BY_COMBINATION_USER_AND_IP = True
+## Optionally, redirect users to a custom lockout template.
+#AXES_LOCKOUT_TEMPLATE = "axes/lockout.html"
+
 
 ROOT_URLCONF = "main.urls"
 

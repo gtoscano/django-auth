@@ -9,6 +9,7 @@ requests = "*"
 bs4 = "*"
 django-axes = "*"
 django-ratelimit = "*"
+django-simple-captcha = "*"
 
 [dev-packages]
 

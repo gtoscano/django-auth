@@ -1,13 +1,12 @@
-from django.shortcuts import render
 
-# Create your views here.
-# authdemo/views.py
-from django.views.decorators.csrf import csrf_exempt
-from django.shortcuts import render
-from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import views as auth_views
-#from ratelimit.decorators import ratelimit
+from django.http import HttpResponse
+from django.shortcuts import render
+from django.utils.decorators import method_decorator
+from django.views.decorators.csrf import csrf_exempt
+
+from django_ratelimit.decorators import ratelimit
 
 # For demonstration, the correct password is hardcoded.
 CORRECT_PASSWORD = "secret"
