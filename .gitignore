@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 rockyou.txt*
+Pipfile.lock
 
 __pycache__/
 *.py[cod]
